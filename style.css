@@ -177,3 +177,109 @@ body::before {
   gap: 15px;
   margin-top: 25%;
 }
+/* Menu button */
+.menu-btn {
+  position: absolute;
+  right: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  backdrop-filter: blur(10px);
+  transition: background 0.25s;
+}
+
+.menu-btn:hover {
+  background: rgb(255, 255, 255, 0.25);
+}
+
+.menu-btn span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: white;
+  border-radius: 99px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: -36px;
+  width: 160px;
+  background: rgba(20, 20, 40, 0.75);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 100;
+
+  /* Ẩn mặc định */
+  opacity: 0;
+  transform: translateY(-8px) scale(0.96);
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  transform-origin: top right;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+  color: white;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.dropdown-item i {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-item span {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+/* Menu button */

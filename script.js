@@ -14,7 +14,7 @@ const weatherSummaryImg = document.querySelector(".weather-summary-img");
 const currentDateTxt = document.querySelector(".current-date-txt");
 
 const forecastItemsContainer = document.querySelector(
-  ".forecast-items-container"
+  ".forecast-items-container",
 );
 
 const apiKey = "38819147a0c692368986574b5a892f95";
@@ -140,3 +140,21 @@ function showDisplaySection(section) {
   sections.forEach((section) => (section.style.display = "none"));
   section.style.display = "flex";
 }
+/* Menu button */
+const menuBtn = document.getElementById("menuBtn");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  menuBtn.classList.toggle("active");
+  dropdownMenu.classList.toggle("open");
+});
+
+// Đóng dropdown khi click ra ngoài
+document.addEventListener("click", (e) => {
+  if (!menuBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+    menuBtn.classList.remove("active");
+    dropdownMenu.classList.remove("open");
+  }
+});
+/* Menu button */
