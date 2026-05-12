@@ -16,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 body::before {
   content: " ";
@@ -31,8 +32,8 @@ body::before {
 }
 
 .main-container {
-  width: 300px;
-  height: 496px;
+  width: 410px;
+  height: 596px;
   z-index: 1;
   background: linear-gradient(
     to top,
@@ -179,14 +180,14 @@ body::before {
 /* Menu button */
 .menu-btn {
   position: absolute;
-  right: -36px;
-  top: 50%;
+  right: -500px;
+  top: -40%;
   transform: translateY(-50%);
-  background: rgb(255, 255, 255, 0.15);
+  background: rgba(114, 105, 105, 0.15);
   border: none;
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -227,8 +228,8 @@ body::before {
 /* Dropdown */
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
-  right: -36px;
+  top: calc(100% + 4px);
+  right: -500px;
   width: 160px;
   background: rgba(20, 20, 40, 0.75);
   backdrop-filter: blur(20px);
@@ -285,6 +286,8 @@ body::before {
 
 /* Lab thuc hanh */
 .container {
+  width: 1200px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -295,11 +298,16 @@ body::before {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
 }
 
 .card h2 {
   margin-bottom: 20px;
-  font-size: 32px;
+  font-size: 20px;
+  color: black;
 }
 
 .lab-list {
@@ -307,15 +315,19 @@ body::before {
 }
 
 .lab-list a {
+  cursor: pointer;
   display: block;
   text-decoration: none;
   color: black;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .lab-list a:hover {
   color: #1db954;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .btn {
@@ -327,12 +339,14 @@ body::before {
   padding: 14px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: #18a84f;
+  cursor: pointer;
 }
 
 /* Responsive */
