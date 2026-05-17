@@ -423,12 +423,16 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* TIÊU ĐỀ */
 .card h2 {
   margin-bottom: 20px;
-  font-size: 20px; /* Nhỏ lại */
+  font-size: 20px;
   color: #333;
 }
 
@@ -442,7 +446,8 @@ body {
   text-decoration: none;
   color: black;
   margin-bottom: 12px;
-  font-size: 16px; /* Nhỏ lại */
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .lab-list a:hover {
@@ -459,12 +464,13 @@ body {
   padding: 12px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 16px; /* Nhỏ lại */
+  font-size: 16px;
   font-weight: bold;
+  margin-top: auto;
 }
 
 .btn:hover {
-  background-color: #18a84f;
+  background-color: #0f7135;
 }
 
 /* Responsive */
